@@ -110,7 +110,7 @@ describe("POST /split-payments/compute", () => {
       );
 
       expect(matchingTransaction).toBeDefined();
-      expect(transaction.Amount).toEqual(matchingTransaction.Amount);
+      expect(transaction.Amount).toBeCloseTo(matchingTransaction.Amount);
     });
   });
 });
